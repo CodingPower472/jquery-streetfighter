@@ -25,11 +25,12 @@ $(document).ready(function() {
     $('.ryu-throwing').hide();
     $('.ryu-ready').show();
   });
-  $(".ryu").keydown(function() {
-   ( "#target" ).keypress(); {
-   ('../images/ryu-cool.gif').show()
- }
-});
+  $(document).keydown(function(event) {
+    if (String.fromCharCode(event.keycode) === 'x') {
+      ('../images/ryu-cool.gif').show()
+      ('../images/ryu-ready.gif').hide()
+    }
+  });
 });
 
 function playHadouken () {
